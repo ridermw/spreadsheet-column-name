@@ -11,15 +11,15 @@ Thank you for your consideration.
 ### PROBLEM
 
 
-Given an integer, compute the spreadsheet column name that its associated with.
+Given a non-negative integer, compute the spreadsheet column name that its associated with.
 
 Example: 
 
 | Input      | Output |
 | :---: | :---: |
-| 1      | A |
-| 26   | Z  |
-| 27   | AA  |
-| 28   | AB  |
-| ??   | BA  |
-| ??   | AAA  |
+| 0      | A |
+| 25   | Z  |
+| 26   | AA  |
+| 27   | AB  |
+| 52   | BA  |
+| 702   | AAA  |
