@@ -8,5 +8,11 @@ namespace spreadsheet_column_name
         {
             Console.WriteLine("Hello World!");
         }
+
+        public static string ConvertColumn(int columnNumber) 
+        {
+
+            return "A";
+        }
     }
 }

@@ -8,8 +8,8 @@ Thank you for your consideration.
 --Matt Williams
 
 
-PROBLEM
--------
+### PROBLEM
+
 
 Given an integer, compute the spreadsheet column name that its associated with.
 
