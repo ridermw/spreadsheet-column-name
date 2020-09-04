@@ -25,9 +25,9 @@ namespace spreadsheet_column_name
             {
                 columnName = 'Z';
             }
-            if (remainder != 0)
+            else 
             {
-                columnName = (char)(columnNumber + 'A' - 1);
+                columnName = (char)(remainder + 'A' - 1);
             }
 
 

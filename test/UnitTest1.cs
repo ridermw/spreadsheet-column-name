@@ -23,6 +23,8 @@ namespace test
         {
             Assert.IsTrue(Program.ConvertColumn(26) == "Z");
             Assert.IsTrue(Program.ConvertColumn(1) == "A");
+            Assert.IsTrue(Program.ConvertColumn(27) == "AA");
+            
         }
     }
 }
