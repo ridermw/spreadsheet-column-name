@@ -1,14 +1,4 @@
-Hi Anuj,
-
-I was not satisfied with my answer I gave during the coding challenge.  So I wanted to work some more on it
-and hopefully come up with a better answer.  I created this project for you to show a better solution.  I commit
-my changes every so often so you can look back through the history to see my progress. 
-
-Thank you for your consideration.
---Matt Williams
-
-
-### PROBLEM
+## PROBLEM
 
 
 Given a non-negative integer, compute the spreadsheet column name that its associated with.
@@ -23,3 +13,14 @@ Example:
 | 27   | AB  |
 | 52   | BA  |
 | 702   | AAA  |
+
+
+
+### Note:
+I was not satisfied with my answer I gave during the coding challenge.  I wanted to work some more on it
+and hopefully come up with a better answer.  I created this project for you to show a better solution.  I commit
+my changes every so often so you can look back through the history to see my progress. 
+
+Thank you for your consideration.
+
+--Matt Williams
