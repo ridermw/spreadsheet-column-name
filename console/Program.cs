@@ -6,7 +6,9 @@ namespace spreadsheet_column_name
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int inputNumber = Int32.Parse(args[0]);
+            Console.Write("Convert Column Number to Name " + args[0] + " : ");
+            Console.WriteLine(ConvertColumn(inputNumber));
         }
 
         public static string ConvertColumn(int columnNumber) 
@@ -15,11 +17,17 @@ namespace spreadsheet_column_name
             if (columnNumber <= 0) return "";
 
             // first I'm going to get 1-26 working. 
+            // try using % 26
             char columnName = 'A';
+            var remainder = columnNumber % 26;
 
-            if (columnNumber - 1 <= 26)
+            if (remainder == 0) // Z
             {
-                columnName = (char)(columnNumber - 1 + 'A');
+                columnName = 'Z';
+            }
+            if (remainder != 0)
+            {
+                columnName = (char)(columnNumber + 'A' - 1);
             }
 
 
