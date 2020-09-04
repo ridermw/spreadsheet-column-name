@@ -18,21 +18,39 @@ namespace spreadsheet_column_name
 
             // first I'm going to get 1-26 working. 
             // try using % 26
-            char columnName = 'A';
-            var remainder = columnNumber % 26;
+            var columnName = 'A';
+            //var remainder = columnNumber % 26;
+            var returnValue = "";
 
-            if (remainder == 0) // Z
+            Console.Write("Calculated " + columnNumber + " : ");
+
+            //alphabet is BASE 26 number...so lets try converting.
+
+            while (columnNumber > 0)
             {
-                columnName = 'Z';
-            }
-            else 
-            {
-                columnName = (char)(remainder + 'A' - 1);
+                var remainder = columnNumber - 1% 26;
+                // if (remainder == 0) // Z
+                //     returnValue = 'Z' + returnValue;
+                // else 
+                    returnValue = (char)(remainder + 'A') + returnValue;
+                columnNumber /= 26;
             }
 
 
-            Console.WriteLine(columnName.ToString());
-            return columnName.ToString();
+            Console.WriteLine(returnValue);
+
+            // if (remainder == 0) // Z
+            // {
+            //     columnName = 'Z';
+            // }
+            // else 
+            // {
+            //     columnName = (char)(remainder + 'A' - 1);
+            // }
+
+
+            // Console.WriteLine(columnName.ToString());
+            return returnValue;
         }
     }
 }
