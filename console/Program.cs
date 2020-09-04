@@ -15,23 +15,24 @@ namespace spreadsheet_column_name
         {
             // edge error check.  should be a non-negative int
             if (columnNumber < 0) return "";
-            Console.Write(columnNumber + " : ");
-            // first I'm going to get 1-26 working. 
-            if (columnNumber <= 26) 
-            {
-                return ((char)(columnNumber + 'A' - 1)).ToString();  // [A-Z]
-            }
-
+            var returnValue = "";
+            
             //alphabet is like a BASE 26 number...so lets try converting.
 
             var remainder = 0;
-            var returnValue = "";
-            while (columnNumber > 0)
+            
+            while (columnNumber >= 0)
             {
+                var addedChar = '0';
                 remainder = columnNumber % 26;
-                var addedChar = remainder == 0 ? 'A' : (char)(remainder + 'A' - 1);
-                returnValue = addedChar + returnValue; // concat to the left
+                Console.WriteLine("Begin: " + columnNumber + " : " + remainder + " : " + returnValue);
+                
+                addedChar = (char)(remainder + 'A');
+            
+                returnValue = addedChar + returnValue; // concat to the left.  Big AH HA! moment for me.
                 columnNumber /= 26;
+                columnNumber--;  // This took me forever to figure out! I was always off by one until I did this.
+                Console.WriteLine("End: " + columnNumber + " : " + returnValue);
             }
 
             Console.WriteLine(returnValue);

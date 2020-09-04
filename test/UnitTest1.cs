@@ -9,30 +9,44 @@ namespace test
         [TestMethod]
         public void Init()
         {
-            Assert.IsTrue(Program.ConvertColumn(1) == "A");
+            Assert.IsTrue(Program.ConvertColumn(0) == "A");
         }
 
         [TestMethod]
         public void InvalidInput()
-        {
-            Assert.IsTrue(Program.ConvertColumn(0) == "");
+        {            
             Assert.IsTrue(Program.ConvertColumn(-1) == "");
         }
         [TestMethod]
-        public void ValidInput()
+        public void ValidInputMultipuleDigits()
+        {            
+            Assert.IsTrue(Program.ConvertColumn(26) == "AA");
+            Assert.IsTrue(Program.ConvertColumn(28) == "AC");
+            Assert.IsTrue(Program.ConvertColumn(29) == "AD");
+            Assert.IsTrue(Program.ConvertColumn(51) == "AZ");
+            Assert.IsTrue(Program.ConvertColumn(52) == "BA");
+            Assert.IsTrue(Program.ConvertColumn(53) == "BB");
+            Assert.IsTrue(Program.ConvertColumn(54) == "BC");
+            Assert.IsTrue(Program.ConvertColumn(675) == "YZ");
+            Assert.IsTrue(Program.ConvertColumn(676) == "ZA");
+            Assert.IsTrue(Program.ConvertColumn(677) == "ZB");
+            Assert.IsTrue(Program.ConvertColumn(700) == "ZY");
+            Assert.IsTrue(Program.ConvertColumn(701) == "ZZ");
+            Assert.IsTrue(Program.ConvertColumn(702) == "AAA");
+        }
+        
+        [TestMethod]
+        public void ValidInputSingleDigits()
         {
-            Assert.IsTrue(Program.ConvertColumn(1) == "A");
-            Assert.IsTrue(Program.ConvertColumn(2) == "B");
-            Assert.IsTrue(Program.ConvertColumn(3) == "C");
-            Assert.IsTrue(Program.ConvertColumn(4) == "D");
-            Assert.IsTrue(Program.ConvertColumn(5) == "E");
-            Assert.IsTrue(Program.ConvertColumn(26) == "Z");
-            Assert.IsTrue(Program.ConvertColumn(27) == "AA");
-            Assert.IsTrue(Program.ConvertColumn(28) == "AB");
-            Assert.IsTrue(Program.ConvertColumn(29) == "AC");
-            Assert.IsTrue(Program.ConvertColumn(52) == "AZ");
-            Assert.IsTrue(Program.ConvertColumn(53) == "BA");
-            Assert.IsTrue(Program.ConvertColumn(676) == "AAA");
+            Assert.IsTrue(Program.ConvertColumn(0) == "A");
+            Assert.IsTrue(Program.ConvertColumn(1) == "B");
+            Assert.IsTrue(Program.ConvertColumn(2) == "C");
+            Assert.IsTrue(Program.ConvertColumn(3) == "D");
+            Assert.IsTrue(Program.ConvertColumn(4) == "E");
+            Assert.IsTrue(Program.ConvertColumn(5) == "F");
+            Assert.IsTrue(Program.ConvertColumn(25) == "Z");
+            Assert.IsTrue(Program.ConvertColumn(51) == "AZ");
+            
         }
     }
 }
