@@ -24,7 +24,10 @@ namespace test
             Assert.IsTrue(Program.ConvertColumn(26) == "Z");
             Assert.IsTrue(Program.ConvertColumn(1) == "A");
             Assert.IsTrue(Program.ConvertColumn(27) == "AA");
-            
+            Assert.IsTrue(Program.ConvertColumn(28) == "AB");
+            Assert.IsTrue(Program.ConvertColumn(29) == "AC");
+            Assert.IsTrue(Program.ConvertColumn(53) == "BA");
+            Assert.IsTrue(Program.ConvertColumn(676) == "AAA");
         }
     }
 }
