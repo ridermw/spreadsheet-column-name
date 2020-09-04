@@ -13,9 +13,9 @@ namespace spreadsheet_column_name
 
         public static string ConvertColumn(int columnNumber) 
         {
-            // edge error check.  should be a postive int
-            if (columnNumber <= 0) return "";
-
+            // edge error check.  should be a non-negative int
+            if (columnNumber < 0) return "";
+            Console.Write(columnNumber + " : ");
             // first I'm going to get 1-26 working. 
             if (columnNumber <= 26) 
             {
@@ -23,6 +23,7 @@ namespace spreadsheet_column_name
             }
 
             //alphabet is like a BASE 26 number...so lets try converting.
+
             var remainder = 0;
             var returnValue = "";
             while (columnNumber > 0)
@@ -33,7 +34,7 @@ namespace spreadsheet_column_name
                 columnNumber /= 26;
             }
 
-            //Console.WriteLine(returnValue);
+            Console.WriteLine(returnValue);
 
             return returnValue;
         }
