@@ -11,5 +11,18 @@ namespace test
         {
             Assert.IsTrue(Program.ConvertColumn(1) == "A");
         }
+
+        [TestMethod]
+        public void InvalidInput()
+        {
+            Assert.IsTrue(Program.ConvertColumn(0) == "");
+            Assert.IsTrue(Program.ConvertColumn(-1) == "");
+        }
+        [TestMethod]
+        public void ValidInput()
+        {
+            Assert.IsTrue(Program.ConvertColumn(26) == "Z");
+            Assert.IsTrue(Program.ConvertColumn(1) == "A");
+        }
     }
 }
